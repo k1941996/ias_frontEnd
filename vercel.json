@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://ias-backend-rmvh.onrender.com/:path*"
+    }
+  ]
+}
