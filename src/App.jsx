@@ -32,7 +32,7 @@ function App() {
           <SearchBox 
             value={searchQuery}
             onChange={setSearchQuery}
-            placeholder="Search questions..."
+            placeholder="Type full words or phrases..."
           />
           <DemoMode onDemoSearch={handleDemoSearch} />
         </div>

@@ -66,15 +66,10 @@ const ResultsTable = ({ results }) => {
                 </div>
               </div>
 
-              {/* Word Count - Desktop */}
-              <div className="hidden md:block md:col-span-1">
-                <div className="text-gray-600 text-sm">
-                  <span className="font-medium">Words:</span> {result.wc}
-                </div>
-              </div>
+
 
               {/* Source Link - Desktop */}
-              <div className="hidden md:block md:col-span-2">
+              <div className="hidden md:block md:col-span-3">
                 <a
                   href={`${result.source}#page=${result.pg}`}
                   target="_blank"
@@ -98,59 +93,54 @@ const ResultsTable = ({ results }) => {
                   View Source
                 </a>
               </div>
+            </div>
 
-              {/* Questions Content */}
-              <div className="md:col-span-6">
-                <div className="space-y-4">
-                  {/* English Question */}
-                  <div>
-                    <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">
-                      Question (English)
-                    </h3>
-                    <p className="text-gray-900 leading-relaxed text-sm md:text-base">
-                      {result.qsEng}
-                    </p>
-                  </div>
+            {/* Questions Content - Full Width */}
+            <div className="mt-6 space-y-6">
+              {/* English Question */}
+              <div>
+                <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wide mb-3">
+                  Question (English)
+                </h3>
+                <p className="text-gray-900 leading-relaxed text-base">
+                  {result.qsEng}
+                </p>
+              </div>
 
-                  {/* Hindi Question */}
-                  <div>
-                    <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">
-                      Question (Hindi)
-                    </h3>
-                    <p className="text-gray-900 leading-relaxed text-sm md:text-base">
-                      {result.qsHin}
-                    </p>
-                  </div>
+              {/* Hindi Question */}
+              <div>
+                <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wide mb-3">
+                  Question (Hindi)
+                </h3>
+                <p className="text-gray-900 leading-relaxed text-base">
+                  {result.qsHin}
+                </p>
+              </div>
 
-                  {/* Mobile Footer */}
-                  <div className="md:hidden flex items-center justify-between pt-2 border-t border-gray-100">
-                    <div className="text-gray-600 text-sm">
-                      <span className="font-medium">Words:</span> {result.wc}
-                    </div>
-                    <a
-                      href={`${result.source}#page=${result.pg}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center px-3 py-1 bg-green-50 text-green-700 rounded-full text-sm font-medium hover:bg-green-100 transition-colors duration-200 cursor-pointer"
-                    >
-                      <svg
-                        className="w-4 h-4 mr-1"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                        />
-                      </svg>
-                      View Source
-                    </a>
-                  </div>
-                </div>
+              {/* Mobile Footer */}
+              <div className="md:hidden flex items-center justify-between pt-4 border-t border-gray-100">
+                <a
+                  href={`${result.source}#page=${result.pg}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-3 py-1 bg-green-50 text-green-700 rounded-full text-sm font-medium hover:bg-green-100 transition-colors duration-200 cursor-pointer"
+                >
+                  <svg
+                    className="w-4 h-4 mr-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                    />
+                  </svg>
+                  View Source
+                </a>
               </div>
             </div>
           </motion.div>
